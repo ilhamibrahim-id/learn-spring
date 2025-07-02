@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
-import aio.co.id.restful.model.ContactRespone;
+import aio.co.id.restful.entity.Contact;
 import aio.co.id.restful.model.WebResponse;
 import aio.co.id.restful.service.ContactService;
 
@@ -18,9 +18,9 @@ public class ContactController {
     @GetMapping(
         path = "/api/contacts/{id}"
     )
-    public WebResponse<ContactRespone> getContactById(@PathVariable String id) {        
-        ContactRespone response = contactService.getContactById(id);
-        return WebResponse.<ContactRespone>builder().data(response).build();
+    public WebResponse<Contact> getContactById(@PathVariable String id) {        
+        Contact response = contactService.getContactById(id);
+        return WebResponse.<Contact>builder().data(response).build();
     }
 
 }
