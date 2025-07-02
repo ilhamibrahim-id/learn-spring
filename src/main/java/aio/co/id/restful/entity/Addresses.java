@@ -16,9 +16,9 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "address")
+@Table(name = "addresses")
 
-public class Address {
+public class Addresses {
 
     @Id
     private String id;
